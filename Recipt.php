@@ -6,6 +6,8 @@
 
 abstract class TypeOfRecipts
 {
+    // Const array of usable Tags
+
     public const reciptTags =
     [
         'Breakfast',
@@ -16,23 +18,29 @@ abstract class TypeOfRecipts
 }
 
 
-abstract class Recipt
+class Recipt
 {
+    // Basic Data
     public $NameOfRecipt;
-    private $ArrayOfIntegriends;
+    // Ingredients
+    private $ArrayOfIngredients;
+    // Tag of what kind of meal is it
     private $Tag;
 
-    public function __construct(string $NameOfRecipt,array $ArrayOfIntegriends,string $Tag)
+    public function __construct(string $NameOfRecipt,array $ArrayOfIngredients,string $Tag)
     {
         $this->NameOfRecipt = $NameOfRecipt;
-        $this->ArrayOfIntegriends = $ArrayOfIntegriends;
+        $this->ArrayOfIngredients = $ArrayOfIngredients;
         $this->Tag = $Tag;
     }
 
-    public function getIntegriends()
+    // Getters to prevent data from changing it
+
+    public function getIngredients()
     {
-        return $this->ArrayOfIntegriends;
+        return $this->ArrayOfIngredients;
     }
+
     public function getTypeOfMeal()
     {
         return $this->Tag;

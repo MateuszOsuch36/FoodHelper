@@ -6,12 +6,12 @@
 
 class Account
 {
-    // Podstawowe dane
+    // Basic Data
     public $nick;
     private $pass;
     private $email;
 
-    // Kontruktor
+    // Constructor
     public function __construct($nick ,$pass , $email)
     {
         $this->nick = $nick;
@@ -19,9 +19,9 @@ class Account
         $this->email = $email;
     }
     
-    // Ważna funkcja
-    // Hasło nie może być dostępne publicznie z oczywistych względów
-    // Każde konto dostaje metodę do sprawdzania hasła tak aby nic nie wyciekło
+    // Important function
+    // Password can't be public so we will have function
+    // which will check if password match account password
     public function Validate($pass)
     {
         // Comparing passwords
