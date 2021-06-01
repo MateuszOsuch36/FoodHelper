@@ -10,13 +10,17 @@ class Account
     public $nick;
     private $pass;
     private $email;
+    private $name;
+    private $surname;
 
     // Constructor
-    public function __construct($nick ,$pass , $email)
+    public function __construct($nick ,$pass , $email, $name , $surname)
     {
         $this->nick = $nick;
         $this->pass = $pass;
         $this->email = $email;
+        $this->name = $name;
+        $this->surname = $surname;
     }
     
     // Important function
